@@ -45,8 +45,6 @@ export default class ProductManager {
 
     try{  
       if(!limit) {
-        //console.log("LISTADO COMPLETO DE PRODUCTOS");
-        //console.table(producto);
         return producto
       }else{
           let respuesta = []

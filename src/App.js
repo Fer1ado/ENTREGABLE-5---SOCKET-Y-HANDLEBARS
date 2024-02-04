@@ -10,7 +10,6 @@ import ProductManager from "./taskfile/productManager.js";
 import express from "express";
 import { _dirname } from "./utils.js";
 
-
 const app = express()
 const PORT = 8080;
 

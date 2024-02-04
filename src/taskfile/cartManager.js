@@ -13,8 +13,8 @@ export default class CartManager {
   }
 
   async getCarrito(cid){
-    const producto = JSON.parse(await fs.readFile(cartRoute, "utf-8"));
-    const entrega = producto.find((e) => e.cartId === parseInt(cid))
+    const producto = JSON.parse(await fs.readFile(cartRoute, "utf-8")); // transformo el archivo a un json
+    const entrega = producto.find((e) => e.cartId === parseInt(cid)) // busco el cart ID que me piden
     console.log(entrega)
     return entrega;
   }
