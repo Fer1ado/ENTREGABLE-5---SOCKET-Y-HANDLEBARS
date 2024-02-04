@@ -37,7 +37,7 @@ export default class CartManager {
 
   async addCarrito(cid, pid) {
     //busco si el id ya tiene un carrito creado y si tiene productos cargados
-     const added = await this.isAdded(cid,pid)
+    const added = await this.isAdded(cid,pid)
     //dejo a disposición el contenido parseado del cart.json y products.json para usar en la función
     const parseCart = JSON.parse(await fs.readFile(cartRoute, "utf-8"))
     const parseProduct = JSON.parse(await fs.readFile(productsRoute, "utf-8"))
@@ -99,7 +99,7 @@ export default class CartManager {
         return ("agregar al carro")
       } else {
         return ("aumentar cantidad")}
-  }
+  } 
 
   async deleteProduct(id) {
     const ID = parseInt(id)
@@ -142,7 +142,6 @@ export default class CartManager {
       return {status: "failed", message: err.message}
     }
   }
-
 
 }
 

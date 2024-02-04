@@ -12,7 +12,6 @@ export default class Product{
     }
 
     static agregarId(){
-       
         return(Math.trunc(Math.random()*(5000 - 1)+1))
     }
     
