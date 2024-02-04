@@ -7,7 +7,9 @@
 -----------------------------------TESTINNG-------------------------------------------
 
 Rutas:
+
 localhost:8080/realtimeproducts/ ----> para el socket de actualización en tiempo real
+
 localhost:8080/home/ ----> para la vista de todos los productos en la tienda
 
 
