@@ -55,6 +55,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use("/static", express.static(_dirname + "/public"))
 app.use('/realtimeproducts', express.static(path.join(_dirname, '/public')))
+app.use('/home', express.static(path.join(_dirname, '/public')))
 
 
 
