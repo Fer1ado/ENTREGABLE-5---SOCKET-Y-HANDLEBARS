@@ -1,13 +1,3 @@
-
-<section>
-
-<form id="addForm"  display="none">
-</form><br><br>
-<form id="removeForm"  display="none" >
-</form>
-
-</section>
-
 <table id="productsTable" class="table" action="/api/products" method="get" > 
     <thead>
         <tr>
@@ -23,9 +13,9 @@
     </thead>
     <tbody>
         {{#each products}}
-            {{#each this as |yValue yKey|}}
+            {{#each}}
         <tr>
-            <td>{{yValue}}</td>
+            <td>{{this.id}}</td>
             <td>{{this.title}}</td>
             <td>{{this.description}}</td>
             <td>{{this.price}}</td>
@@ -39,3 +29,12 @@
     </tbody>
 </table>
 
+
+
+
+
+<section>
+<form id="addForm"  display="none">
+</form><form id="removeForm"  display="none" >
+</form>
+</section>

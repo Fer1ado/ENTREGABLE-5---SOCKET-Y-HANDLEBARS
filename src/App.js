@@ -76,6 +76,7 @@ app.get("/realtimeproducts", (req, res) => {
 
 app.get("/home", async (req, res)=> {
   const products = await manager.getProducts()
+  console.log(JS)
   res.render("home", {...products})
 })
 

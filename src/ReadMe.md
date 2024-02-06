@@ -1,12 +1,12 @@
 //////////////////////////////////////////////////////////////////////////////////////
 
-//////////////////////// npm start para correr el programa////////////////////////////
+**//////////////////////// npm start para correr el programa////////////////////////////**
 
 //////////////////////////////////////////////////////////////////////////////////////
 
------------------------------------TESTINNG-------------------------------------------
+# -----------------------------------TESTINNG-------------------------------------------
 
-RUTAS:<br>
+### RUTAS:<br>
 
 1. localhost:8080/realtimeproducts/ ----> para el socket de actualización en tiempo real<br>
 
@@ -14,9 +14,9 @@ RUTAS:<br>
 
 
 
-----------------------------------PREVIOS----------------------------------------------
+# ----------------------------------PREVIOS---------------------------------------------
 
-1. PRODUCTS
+### 1. PRODUCTS
 
 Método GET http://localhost:8080/api/products/  --> listado de todos los productos<br>
 Método GET http://localhost:8080/api/products?limit=# --> Listado de productos con limite de registros<br>
@@ -35,10 +35,10 @@ Dummy JSON ---> PARA PROBAR RUTA POST http://localhost:8080/api/products/<br>
   "code": "MA8755",
   "stock": 286,
   "status": true
- }
-<br>
+ } <br>
 
-2. CART<br>
+
+### 2. CART<br>
 <br>
 Método POST http://localhost:8080/api/cart/ --> Crea un carrito nuevo<br>
 Método GET  http://localhost:8080/api/cart/:cartId --> Devuelve contenido de carrito según ID<br>

@@ -54,13 +54,13 @@ export default class CartManager {
             const cart =  parseCart.find((e) => e.cartId === cid)
             const existencia = cart.products
             const item =  {productid: pid, quantity: 1 }
-            const nuevoarray = [...existencia, item]
-            const nuevoitem = {cartId: cid, products: [...nuevoarray]}
+            const nuevoArray = [...existencia, item]
+            const nuevoCart = {cartId: cid, products: [...nuevoArray]}
             const nuevoJson = parseCart.filter((e) => e.cartId != cid)
-            const remplazo = nuevoJson.concat(nuevoitem)
+            const remplazo = nuevoJson.concat(nuevoCart)
             await fs.writeFile(cartRoute, JSON.stringify(remplazo))
             console.log(`Hay ${item.quantity} unidad del producto ${pid} agregada en Carrito `)
-            return {status: "success", message: "SE AGREGARON PRODUCTOS AL CARRITO EXITOSAMENTE", producto: nuevoitem}
+            return {status: "success", message: "SE AGREGARON PRODUCTOS AL CARRITO EXITOSAMENTE", producto: nuevoCart}
           } else {
             return{status: "failed", message: "PRODUCTO INEXISTENTE EN BASE DE DATOS"}}
         }
@@ -73,7 +73,7 @@ export default class CartManager {
           const existencia = productToUpdate.products
           const filtrado = existencia.filter(prod => prod.productid != pid)
           const nuevoarray = [...filtrado, final]
-          const objRemplazo = {...productToUpdate, products: nuevoarray }
+          const objRemplazo = {...productToUpdate, products: nuevoarray}
           const nuevoJson = parseCart.filter((e) => e.cartId != cid)
           const remplazo = nuevoJson.concat(objRemplazo)
           await fs.writeFile(cartRoute, JSON.stringify(remplazo))
